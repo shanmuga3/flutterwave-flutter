@@ -59,7 +59,7 @@ class _CardPaymentState extends State<CardPayment>
         body: Form(
           key: this._cardFormKey,
           child: Container(
-            margin: EdgeInsets.fromLTRB(10, 30, 10, 10),
+            margin: EdgeInsets.fromLTRB(0, 30, 0, 10),
             width: double.infinity,
             child: Column(
               children: [
@@ -76,7 +76,7 @@ class _CardPaymentState extends State<CardPayment>
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.fromLTRB(40, 5, 40, 5),
+                  margin: EdgeInsets.fromLTRB(30, 5, 40, 5),
                   width: double.infinity,
                   child: TextFormField(
                     decoration: InputDecoration(
@@ -95,15 +95,15 @@ class _CardPaymentState extends State<CardPayment>
                   ),
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  // mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Container(
-                      width: MediaQuery.of(context).size.width / 7,
-                      margin: EdgeInsets.fromLTRB(30, 5, 30, 5),
+                      width: MediaQuery.of(context).size.width / 6,
+                      margin: EdgeInsets.fromLTRB(30, 5, 10, 5),
                       child: TextFormField(
                         decoration: InputDecoration(
                           hintText: "MM",
-                          labelText: "Month",
+                          labelText: "MM",
                           counterText: "",
                         ),
                         maxLength: 2,
@@ -120,12 +120,12 @@ class _CardPaymentState extends State<CardPayment>
                       ),
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width / 7,
-                      margin: EdgeInsets.fromLTRB(40, 5, 40, 5),
+                      width: MediaQuery.of(context).size.width / 6,
+                      margin: EdgeInsets.fromLTRB(10, 5, 5, 5),
                       child: TextFormField(
                         decoration: InputDecoration(
                           hintText: "YY",
-                          labelText: "Year",
+                          labelText: "YY",
                           counterText: "",
                         ),
                         maxLength: 2,
@@ -142,8 +142,8 @@ class _CardPaymentState extends State<CardPayment>
                       ),
                     ),
                     Container(
-                      width: MediaQuery.of(context).size.width / 7,
-                      margin: EdgeInsets.fromLTRB(40, 5, 40, 5),
+                      width: MediaQuery.of(context).size.width / 3,
+                      margin: EdgeInsets.fromLTRB(50, 5, 0, 0),
                       child: TextFormField(
                         decoration: InputDecoration(
                           hintText: "cvv",
@@ -171,7 +171,7 @@ class _CardPaymentState extends State<CardPayment>
                 Container(
                   width: double.infinity,
                   height: 45,
-                  margin: EdgeInsets.fromLTRB(40, 20, 20, 40),
+                  margin: EdgeInsets.fromLTRB(30, 20, 30, 30),
                   child: RaisedButton(
                     onPressed: this._onCardFormClick,
                     color: Colors.orangeAccent,
